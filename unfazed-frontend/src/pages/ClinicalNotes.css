@@ -1,0 +1,464 @@
+/* =========================================================
+   UNFAZED — CLINICAL NOTES
+========================================================= */
+
+.notes-security-banner {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  margin-bottom: 22px;
+  padding: 15px 18px;
+
+  border: 1px solid #d6e9e5;
+  border-radius: 14px;
+
+  background: #edf8f5;
+}
+
+.notes-security-icon {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+  color: #39857d;
+}
+
+.notes-security-banner strong {
+  display: block;
+  margin-bottom: 3px;
+
+  color: #275e59;
+  font-size: 12px;
+}
+
+.notes-security-banner span {
+  color: #6f8985;
+  font-size: 11px;
+}
+
+
+/* SUMMARY */
+
+.notes-summary-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 17px;
+  margin-bottom: 22px;
+}
+
+.notes-summary-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 20px;
+
+  background: #ffffff;
+
+  border: 1px solid #deebe9;
+  border-radius: 17px;
+
+  box-shadow:
+    0 8px 24px rgba(23, 59, 58, 0.045);
+}
+
+.notes-summary-icon {
+  width: 43px;
+  height: 43px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #eaf6f3;
+  color: #39857d;
+}
+
+.notes-summary-card span {
+  display: block;
+  margin-bottom: 5px;
+
+  color: #7c8e8b;
+  font-size: 11px;
+}
+
+.notes-summary-card strong {
+  display: block;
+
+  color: #173b3a;
+  font-size: 23px;
+  line-height: 1;
+}
+
+
+/* NOTES CARD */
+
+.notes-card {
+  overflow: hidden;
+}
+
+.notes-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 22px 25px;
+
+  border-bottom: 1px solid #e8efee;
+}
+
+.notes-toolbar h2 {
+  margin: 0 0 5px;
+
+  color: #173f3c;
+  font-size: 18px;
+}
+
+.notes-toolbar p {
+  margin: 0;
+
+  color: #849592;
+  font-size: 12px;
+}
+
+
+/* SEARCH */
+
+.notes-search {
+  width: 270px;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 10px 13px;
+
+  border: 1px solid #d9e7e5;
+  border-radius: 10px;
+
+  background: #fbfdfd;
+
+  color: #88a09c;
+
+  transition: 0.2s ease;
+}
+
+.notes-search:focus-within {
+  border-color: #9fcac5;
+  background: #ffffff;
+  box-shadow:
+    0 0 0 3px rgba(53, 132, 124, 0.08);
+}
+
+.notes-search input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+  color: #294a47;
+
+  font-family: inherit;
+  font-size: 12px;
+}
+
+.notes-search input::placeholder {
+  color: #9aaba8;
+}
+
+
+/* NOTE LIST */
+
+.notes-list {
+  min-height: 180px;
+}
+
+.clinical-note-row {
+  display: grid;
+
+  grid-template-columns:
+    45px minmax(0, 1fr) 34px auto;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 20px 25px;
+
+  border-bottom: 1px solid #edf2f1;
+
+  transition: background 0.18s ease;
+}
+
+.clinical-note-row:last-child {
+  border-bottom: none;
+}
+
+.clinical-note-row:hover {
+  background: #fbfdfd;
+}
+
+
+/* AVATAR */
+
+.note-client-avatar {
+  width: 43px;
+  height: 43px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #e5f3f0;
+  color: #317c74;
+
+  font-size: 14px;
+  font-weight: 800;
+}
+
+
+/* NOTE CONTENT */
+
+.clinical-note-main {
+  min-width: 0;
+}
+
+.clinical-note-title {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-bottom: 4px;
+}
+
+.clinical-note-title strong {
+  color: #294a47;
+  font-size: 13px;
+}
+
+.clinical-note-type {
+  display: block;
+  margin-bottom: 6px;
+
+  color: #39857d;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.clinical-note-main p {
+  margin: 0 0 9px;
+
+  max-width: 700px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  color: #718683;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+
+/* STATUS */
+
+.note-status {
+  padding: 5px 9px;
+
+  border-radius: 999px;
+
+  background: #e8f6f0;
+  color: #317b65;
+
+  font-size: 9px;
+  font-weight: 750;
+
+  text-transform: capitalize;
+}
+
+.note-status.draft {
+  background: #fff4dc;
+  color: #996b17;
+}
+
+
+/* META */
+
+.clinical-note-meta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.clinical-note-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  color: #92a19f;
+  font-size: 10px;
+}
+
+.clinical-note-meta svg {
+  color: #4a918a;
+}
+
+
+/* ACTIONS */
+
+.note-menu {
+  width: 31px;
+  height: 31px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 8px;
+
+  background: transparent;
+  color: #91a29f;
+}
+
+.note-menu:hover {
+  background: #edf7f5;
+  color: #347b74;
+}
+
+.note-open {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 8px 11px;
+
+  border: 1px solid #d6e6e3;
+  border-radius: 8px;
+
+  background: #ffffff;
+  color: #347b74;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  transition: 0.2s ease;
+}
+
+.note-open:hover {
+  background: #edf7f5;
+  border-color: #afd2cd;
+}
+
+
+/* EMPTY */
+
+.notes-list .empty-state {
+  min-height: 230px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  color: #829491;
+  font-size: 13px;
+}
+
+
+/* FOOTER */
+
+.notes-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 16px 25px;
+
+  border-top: 1px solid #e9f0ef;
+
+  color: #899a98;
+  font-size: 11px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+  .notes-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .notes-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .notes-search {
+    width: 100%;
+  }
+
+  .clinical-note-row {
+    grid-template-columns:
+      43px minmax(0, 1fr) auto;
+  }
+
+  .note-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard-page {
+    padding: 24px 16px 40px;
+  }
+
+  .notes-security-banner {
+    align-items: flex-start;
+  }
+
+  .clinical-note-row {
+    grid-template-columns: 43px minmax(0, 1fr);
+  }
+
+  .note-open {
+    grid-column: 2;
+    width: fit-content;
+  }
+
+.clinical-note-main p {
+  white-space: normal;
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+  .notes-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+}

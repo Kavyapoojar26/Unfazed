@@ -1,0 +1,266 @@
+/* =========================================================
+   ANALYTICS PAGE LAYOUT
+========================================================= */
+
+.analytics-page {
+  width: 100%;
+}
+
+/* Four KPI cards */
+
+.analytics-page .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 17px;
+  margin-bottom: 22px;
+}
+
+.analytics-page .stat-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+
+  min-height: 125px;
+  padding: 20px;
+
+  background: #ffffff;
+  border: 1px solid #deebe9;
+  border-radius: 17px;
+
+  box-shadow: 0 8px 24px rgba(23, 59, 58, 0.045);
+}
+
+.analytics-page .stat-icon {
+  width: 43px;
+  height: 43px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #eaf6f3;
+  color: #39857d;
+}
+
+
+/* HEADER BUTTON */
+
+.analytics-page .new-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 11px 17px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #35847c;
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+/* RESPONSIVE KPI GRID */
+
+@media (max-width: 1100px) {
+  .analytics-page .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .analytics-page .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   UNFAZED — ANALYTICS
+========================================================= */
+
+.analytics-summary-card {
+  min-height: 125px;
+}
+
+.analytics-summary-content {
+  min-width: 0;
+}
+
+.analytics-summary-content span {
+  display: block;
+  margin-bottom: 5px;
+
+  color: #7c8e8b;
+  font-size: 11px;
+}
+
+.analytics-summary-content strong {
+  display: block;
+  margin-bottom: 6px;
+
+  color: #173b3a;
+  font-size: 23px;
+  line-height: 1.05;
+}
+
+.analytics-summary-content small {
+  display: block;
+
+  color: #93a29f;
+  font-size: 9px;
+  line-height: 1.4;
+}
+
+
+/* ANALYTICS CONTENT */
+
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+
+/* CARD HEADER */
+
+.content-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 22px 25px;
+
+  border-bottom: 1px solid #e8efee;
+}
+
+.content-card-header h2 {
+  margin: 0 0 5px;
+
+  color: #173f3c;
+  font-size: 18px;
+}
+
+.content-card-header p {
+  margin: 0;
+
+  color: #849592;
+  font-size: 12px;
+}
+
+
+/* ANALYTICS LIST */
+
+.analytics-list {
+  padding: 3px 25px;
+}
+
+.analytics-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  min-height: 76px;
+
+  border-bottom: 1px solid #edf2f1;
+}
+
+.analytics-row:last-child {
+  border-bottom: none;
+}
+
+.analytics-row > div:first-child {
+  min-width: 0;
+}
+
+.analytics-row span {
+  display: block;
+  margin-bottom: 6px;
+
+  color: #718683;
+  font-size: 11px;
+}
+
+.analytics-row strong {
+  display: block;
+
+  color: #173f3c;
+  font-size: 17px;
+  line-height: 1;
+}
+
+.analytics-growth {
+  flex-shrink: 0;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 7px 10px;
+
+  border-radius: 999px;
+
+  background: #edf7f5;
+  color: #39857d;
+
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.analytics-growth svg {
+  flex-shrink: 0;
+}
+
+
+/* ERROR */
+
+.analytics-grid + .auth-error {
+  margin-top: 20px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+  .analytics-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .dashboard-page {
+    padding: 24px 16px 40px;
+  }
+
+  .analytics-summary-card {
+    min-height: 105px;
+  }
+
+  .analytics-list {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .content-card-header {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .analytics-row {
+    min-height: 70px;
+  }
+
+  .analytics-growth {
+    font-size: 8px;
+    padding: 6px 8px;
+  }
+}
